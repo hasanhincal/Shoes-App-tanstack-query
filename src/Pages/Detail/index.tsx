@@ -20,7 +20,7 @@ const Detail = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Error message={error.message} />
+        <Error message={error.message} name="shoe" />
       ) : (
         data && (
           <section className="grid grid-cols md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-4">

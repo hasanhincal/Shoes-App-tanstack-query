@@ -22,7 +22,7 @@ const List = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Error message={error.message} />
+        <Error message={error.message} name="shoes" />
       ) : data?.length === 0 ? (
         <p>Üzgünüz Aradığınız Kriterlere Uygun Ürün Bulunamadı... </p>
       ) : (
