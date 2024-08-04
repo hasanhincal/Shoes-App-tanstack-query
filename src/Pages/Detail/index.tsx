@@ -7,6 +7,7 @@ import { Shoe } from "../../types";
 import Head from "./Head";
 import Color from "./Color";
 import Size from "./Size";
+import xss from "xss";
 
 const Detail = () => {
   const { id } = useParams();
@@ -43,7 +44,7 @@ const Detail = () => {
 
                 <p
                   className="text-[16px] font-open font-regular text-gray-dark"
-                  dangerouslySetInnerHTML={{ __html: data.description }}
+                  dangerouslySetInnerHTML={{ __html: xss(data.description) }}
                 />
               </div>
             </div>
